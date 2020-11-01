@@ -21,8 +21,8 @@
 ## Roadmap
 
 - The next step from here is to decide what we would like to do with the data
-  - If we would like to send the users score back to a database to be compared with other users we should look into server side api's
-- We should add some form validation for the initals input form
+  - If we would like to send the users score back to a database to be compared with other users we should look into server-side api's
+- We should add some form validation for the initials input form
 
 ## Screenshots
 
