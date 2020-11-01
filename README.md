@@ -16,7 +16,7 @@
 
 ## Installation
 
-- No installation is required. The webpage may be viewed [here](https://vtaymany.github.io/code-quiz/)
+- No installation is required. The application may be viewed [here](https://vtaymany.github.io/code-quiz/)
 
 ## Roadmap
 
