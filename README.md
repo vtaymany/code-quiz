@@ -25,9 +25,11 @@
 - We should add some form validation for the initials input form
 
 ## Screenshots
-
+Welcome Screen
 ![Welcome Screen](./Assets/screenshots/welcome-screen.png 'Welcome Screen')
+Quiz Question
 ![Quiz Question](./Assets/screenshots/quiz.png 'Quiz Question')
+Scores Table
 ![Scores table](./Assets/screenshots/scores-table.png 'Scores table')
 
 ## Credits
