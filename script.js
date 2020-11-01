@@ -3,24 +3,34 @@ var questionIndex = 0
 var userScore = 0
 var testBank = [
   {
-    question: 'What is your name?',
+    question: 'Which of the following is a data type in Javascript?',
     options: {
-      optionA: 'Mark',
-      optionB: 'Bob',
-      optionC: 'Joe',
-      optionD: 'Yo',
+      optionA: 'Boo',
+      optionB: 'BooBoo',
+      optionC: 'Boolean',
+      optionD: 'Leanboo',
     },
-    answer: 'A',
+    answer: 'C',
   },
   {
-    question: 'What is your age?',
+    question: 'Which of the following is an operator in Javascript? ?',
     options: {
-      optionA: '1',
-      optionB: '2',
-      optionC: '3',
-      optionD: '4',
+      optionA: '$',
+      optionB: '*',
+      optionC: '#',
+      optionD: '@',
     },
     answer: 'B',
+  },
+  {
+    question: 'Which of the following is a selector in Javascript? ?',
+    options: {
+      optionA: '$',
+      optionB: '*',
+      optionC: '+',
+      optionD: '/',
+    },
+    answer: 'A',
   },
 ]
 // -- End test bank --
