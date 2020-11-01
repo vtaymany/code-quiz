@@ -64,7 +64,7 @@ function takeQuiz() {
 // -- End functions --
 
 // -- Begin Quiz --
-var sec = 5
+var sec = 60
 $('#startButton').on('click', function () {
   //Hides the welcome message..
   $('#welcomeScreen').hide()
