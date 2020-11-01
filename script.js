@@ -43,6 +43,7 @@ function printQuestion() {
   $('#code-quiz-optionB').text(testBank[questionIndex].options.optionB)
   $('#code-quiz-optionC').text(testBank[questionIndex].options.optionC)
   $('#code-quiz-optionD').text(testBank[questionIndex].options.optionD)
+  $('#submission-result').text('')
 }
 // Quiz logic
 function takeQuiz() {
@@ -50,12 +51,14 @@ function takeQuiz() {
   var userInput = $('.code-quiz-options').on('click', function () {
     userInput = this.value
     if (userInput == testBank[questionIndex].answer) {
-      alert('you got it right')
+      $('#submission-result').text('Congrats you made it!')
       questionIndex++
       userScore++
       printQuestion()
     } else {
-      alert('Try again..but hurry!!! You are running out of time!!!')
+      $('#submission-result').text(
+        'Wrong..try again..but hurry!!! You are running out of time!!!'
+      )
       sec -= 20
       console.log(sec)
     }
@@ -63,7 +66,7 @@ function takeQuiz() {
 }
 // -- End functions --
 
-// -- Begin Quiz --
+// -- Begin Quiz --]
 var sec = 60
 $('#startButton').on('click', function () {
   //Hides the welcome message..
@@ -86,6 +89,7 @@ $('#startButton').on('click', function () {
     }
   }
 })
+
 // -- End Quiz --
 
 // -- Begin Scorestable --
@@ -99,6 +103,7 @@ $('#postScore').on('click', function () {
 })
 
 $('#view-high-scores').on('click', function () {
+  $('#game-over').hide()
   $('#welcomeScreen').hide()
   $('#code-quiz').hide()
   $('#scores-table').show()
