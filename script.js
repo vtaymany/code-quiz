@@ -54,13 +54,14 @@ function takeQuiz() {
       $('#submission-result').text('Congrats you made it!')
       questionIndex++
       userScore++
-      printQuestion()
+      if (questionIndex < testBank.length) {
+        printQuestion()
+      }
     } else {
       $('#submission-result').text(
         'Wrong..try again..but hurry!!! You are running out of time!!!'
       )
       sec -= 20
-      console.log(sec)
     }
   })
 }
@@ -75,8 +76,8 @@ $('#startButton').on('click', function () {
   $('#code-quiz').show()
   takeQuiz()
   //Starts the timer
-  var time = setInterval(timedQuiz, 1000)
-  function timedQuiz() {
+  var time = setInterval(timer, 1000)
+  function timer() {
     document.getElementById('timeLeft').innerHTML = sec + 's'
     sec--
     //..andif the user runs out of time
@@ -89,7 +90,6 @@ $('#startButton').on('click', function () {
     }
   }
 })
-
 // -- End Quiz --
 
 // -- Begin Scorestable --
