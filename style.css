@@ -9,11 +9,28 @@
 }
 
 #initials {
-  width: 10%;
+  width: 50%;
   margin: 0em auto 1em auto;
 }
 
 #highScores {
-  width: 25%;
+  width: 50%;
   margin: auto;
+}
+
+#code-quiz {
+  margin-top: 25%;
+}
+
+#code-quiz-question {
+  margin-bottom: 1em;
+  font-size: 2em;
+}
+
+.code-quiz-options {
+  padding: 1em;
+}
+
+.lead {
+  font-size: 0.9em;
 }
