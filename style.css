@@ -1,0 +1,6 @@
+.disableClick {
+  pointer-events: none;
+}
+#code-quiz {
+  display: none;
+}
