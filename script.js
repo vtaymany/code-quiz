@@ -39,7 +39,7 @@ function takeQuiz() {
   printQuestion()
   var userInput = $('.code-quiz-options').on('click', function () {
     userInput = this.value
-    if (userInput == testBank[0].answer) {
+    if (userInput == testBank[questionIndex].answer) {
       alert('you got it right')
       questionIndex++
       userScore++
@@ -54,9 +54,9 @@ function takeQuiz() {
 // -- End functions --
 
 // -- Begin Quiz --
-var sec = 1
+var sec = 5
 $('#startButton').on('click', function () {
-  //hides the welcome message..
+  //Hides the welcome message..
   $('#welcomeScreen').hide()
   //and shows the quiz.
   $('#code-quiz').show()
@@ -66,8 +66,8 @@ $('#startButton').on('click', function () {
   function timedQuiz() {
     document.getElementById('timeLeft').innerHTML = sec + 's'
     sec--
-    //..if the user runs out of time
-    if (sec < 0) {
+    //..andif the user runs out of time
+    if (sec < 0 || questionIndex == testBank.length) {
       clearInterval(time)
       $('#timer').hide()
       $('#code-quiz').hide()
