@@ -14,12 +14,12 @@
         <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">View Highscores</a>
+                    <a class="nav-link" id="view-high-scores" href="#">View Highscores</a>
                 </li>
             </ul>
         </div>
         <div class="mx-auto order-0">
-            <a class="navbar-brand mx-auto disableClick" href="#">What Is Life?</a>
+            <a class="navbar-brand mx-auto" href="./index.html">What Is Life?</a>
         </div>
         <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
             <ul class="navbar-nav ml-auto">
@@ -30,7 +30,7 @@
         </div>
     </nav>
 
-    <div class="jumbotron">
+    <div class="jumbotron" id="welcomeScreen">
         <h1 class="display-4 text-center">What is life?</h1>
         <p class="lead text-center">These three questions will guide you</p>
         <div class="text-center">
@@ -46,6 +46,20 @@
         <button class="code-quiz-options" id="code-quiz-optionD" type="button" value="D"></button>
     </div>
 
+    <div class="jumbotron" id="game-over">
+        <h1 class="display-4 text-center">Game Over!</h1>
+        <p class="text-center">Your score was <span id="userScore"></span></p>
+        <div class="text-center">
+            <input type="text" class="form-control" id="initials" placeholder="Your Initials">
+            <a class="btn btn-primary btn-lg content-center" id="postScore" href="#" role="button">Post Score</a>
+        </div>
+    </div>
+
+    <div class="jumbotron" id="scores-table">
+        <h1 class="display-4 text-center">Highscores</h1>
+        <ol id="highScores">
+        </ol>
+    </div>
 
 
 

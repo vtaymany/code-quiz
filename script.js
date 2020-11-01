@@ -13,10 +13,10 @@
 // Coding Quiz
 
 // When the user clicks on the start button..
-var sec = 60
+var sec = 1
 $('#startButton').on('click', function () {
   //hides the welcome message..
-  $('.jumbotron').hide()
+  $('#welcomeScreen').hide()
   //and shows the quiz.
   $('#code-quiz').show()
   //Starts the timer
@@ -27,6 +27,9 @@ $('#startButton').on('click', function () {
     //..if the user runs out of time
     if (sec < 0) {
       clearInterval(time)
+      $('#code-quiz').hide()
+      $('#userScore').text(userScore)
+      $('#game-over').show()
     }
   }
 })
@@ -59,24 +62,41 @@ var testBank = [
   },
 ]
 
-function printQuestions() {
+function printQuestion() {
   $('#code-quiz-question').text(testBank[questionIndex].question)
   $('#code-quiz-optionA').text(testBank[questionIndex].options.optionA)
   $('#code-quiz-optionB').text(testBank[questionIndex].options.optionB)
   $('#code-quiz-optionC').text(testBank[questionIndex].options.optionC)
   $('#code-quiz-optionD').text(testBank[questionIndex].options.optionD)
 }
-printQuestions()
+
+printQuestion()
 var userInput = $('.code-quiz-options').on('click', function () {
   userInput = this.value
   if (userInput == testBank[0].answer) {
     alert('you got it right')
     questionIndex++
     userScore++
-    printQuestions()
+    printQuestion()
   } else {
-    alert('Try again..but hurry..you are running out of time!!')
+    alert('Try again..but hurry!!! You are running out of time!!!')
     sec -= 20
     console.log(sec)
   }
+})
+
+//Submit score to scorestable
+$('#postScore').on('click', function () {
+  var test = $('#initials').val()
+  var newScoreEntry = $('<li>').text(test + ' scored ' + userScore)
+  console.log(newScoreEntry)
+  $('#highScores').append(newScoreEntry)
+  $('#game-over').hide()
+  $('#scores-table').show()
+})
+
+$('#view-high-scores').on('click', function () {
+  $('#welcomeScreen').hide()
+  $('#code-quiz').hide()
+  $('#scores-table').show()
 })

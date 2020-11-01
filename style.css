@@ -1,6 +1,19 @@
 .disableClick {
   pointer-events: none;
 }
-#code-quiz {
+
+#code-quiz,
+#game-over,
+#scores-table {
   display: none;
+}
+
+#initials {
+  width: 10%;
+  margin: 0em auto 1em auto;
+}
+
+#highScores {
+  width: 25%;
+  margin: auto;
 }
