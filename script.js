@@ -1,6 +1,7 @@
 // -- Start test bank --
 var questionIndex = 0
 var userScore = 0
+var sec = 60
 var testBank = [
   {
     question: 'Which of the following is a data type in Javascript?',
@@ -36,6 +37,7 @@ var testBank = [
 // -- End test bank --
 
 // -- Begin functions --
+
 // Prints question to DOM
 function printQuestion() {
   $('#code-quiz-question').text(testBank[questionIndex].question)
@@ -65,10 +67,10 @@ function takeQuiz() {
     }
   })
 }
+
 // -- End functions --
 
 // -- Begin Quiz --]
-var sec = 60
 $('#startButton').on('click', function () {
   //Hides the welcome message..
   $('#welcomeScreen').hide()
@@ -101,7 +103,7 @@ $('#postScore').on('click', function () {
   $('#game-over').hide()
   $('#scores-table').show()
 })
-
+//View highscores in the top nav
 $('#view-high-scores').on('click', function () {
   $('#game-over').hide()
   $('#welcomeScreen').hide()
